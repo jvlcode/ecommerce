@@ -135,21 +135,7 @@
               </div>
               <div class="row" *ngIf="category!=undefined">
 
-                  <div *ngFor="let product of products" class="col-lg-4 col-md-6 col-sm-6">
-                      <div class="product__item">
-                          <div class="product__item__pic set-bg" style="background-image:url('assets/img/product/product-1.jpg')">
-                              <ul class="product__item__pic__hover">
-                                  <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                  <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="product__item__text">
-                              <h6><a routerLink="/detail/{{product.slug}}">{{product.name}}</a></h6>
-                              <h5>${{product.price}}</h5>
-                          </div>
-                      </div>
-                  </div>
+                  <app-product routerLink="/detail/{{product.slug}}" [product]="product" *ngFor="let product of products" class="col-lg-4 col-md-6 col-sm-6"></app-product>
               </div>
               <div  class="product__pagination">
                   <a href="#">1</a>

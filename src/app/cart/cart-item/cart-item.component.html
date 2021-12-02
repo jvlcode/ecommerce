@@ -1,0 +1,23 @@
+
+    <td class="shoping__cart__item">
+        <img height="100" width="100" src="{{item.product.image}}" alt="">
+        <h5>{{item.product.name}}</h5>
+    </td>
+    <td class="shoping__cart__price">
+        ${{item.product.price}}
+    </td>
+    <td class="shoping__cart__quantity">
+        <div class="quantity">
+            <div class="pro-qty">
+                <input  type="text"  value="{{item.qty}}"  (input)="changeQty($event)"  >
+            </div>
+        </div>
+    </td>
+    <td class="shoping__cart__total">
+        ${{item.product.price * item.qty}}
+    </td>
+    <td class="shoping__cart__item__close">
+        <span class="icon_close" (click)="remove()"></span>
+    </td>
+
+

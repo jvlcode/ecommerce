@@ -12,10 +12,9 @@ declare var $:any;
 export class HomeComponent implements OnInit {
 
   constructor(private categoryService:CategoryService) { }
-  categories!:CategoryModel[];
+  categories!:CategoryModel[]|null;
   ngOnInit(){
      this.categoryService.get().subscribe((categories:CategoryModel[])=>{
-       console.log(categories);
 
         this.categories = categories;
 

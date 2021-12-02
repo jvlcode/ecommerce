@@ -7,7 +7,9 @@ import { CategoryModel } from "../models/category.model";
 export class CategoryService{
     categories!:CategoryModel[];
     constructor(private http:HttpClient){
-        this.categories = [new CategoryModel(2,'Category 2','cat2'),new CategoryModel(3,'Category 3','cat3')];
+        this.categories = [
+          new CategoryModel(1,'Category 1','cat2'),
+          new CategoryModel(2,'Category 2','cat3')];
     }
     findSlug(slug:string){
       // return this.http.
