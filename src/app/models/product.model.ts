@@ -9,12 +9,13 @@ export class ProductModel{
     category_id!:number;
      category!:CategoryModel|undefined;
     is_available=true;
+    is_featured=false;
     shipping_days!:number;
     is_shipping_free!:boolean;
     weight!:number;
     images!:Array<string>;
 
-    constructor(id:number,name:string,price:number,image:string|null,images:Array<string>,description:string,slug:string,category_id:number,weight:number,shipping_days:number,is_available:boolean,is_shipping_free:boolean){
+    constructor(id:number,name:string,price:number,image:string|null,images:Array<string>,description:string,slug:string,category_id:number,weight:number,shipping_days:number,is_available:boolean,is_featured:boolean,is_shipping_free:boolean){
         this.id = id;
         this.name = name;
         this.price = price;
@@ -27,6 +28,7 @@ export class ProductModel{
         this.is_available = is_available;
         this.is_shipping_free = is_shipping_free;
         this.images = images
+        this.is_featured = is_featured;
         this.description = description
     }
 

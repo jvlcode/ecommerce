@@ -8,8 +8,8 @@ export class CategoryService{
     categories!:CategoryModel[];
     constructor(private http:HttpClient){
         this.categories = [
-          new CategoryModel(1,'Category 1','cat2'),
-          new CategoryModel(2,'Category 2','cat3')];
+          new CategoryModel(1,'Category 1','cat2','assets/img/categories/cat-1.jpg'),
+          new CategoryModel(2,'Category 2','cat3','assets/img/categories/cat-2.jpg')];
     }
     findSlug(slug:string){
       // return this.http.
@@ -27,6 +27,7 @@ export class CategoryService{
       // get<CategoryModel[]>('https://learn-angular-4a577-default-rtdb.firebaseio.com/categories.json')
 
     }
+
 
 
 }

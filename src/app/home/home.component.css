@@ -1,0 +1,40 @@
+.hero__search__categories ul{
+   list-style: none;
+}
+
+.hero__search__categories ul li{
+    padding: 12px;
+    margin-left: -16px;
+
+}
+ .hero__search__categories ul li a{
+  color: black;
+ }
+ .hero__search__categories ul li.category{
+    display: none;
+}
+.hero__search__categories ul li.category.active{
+    display: block;
+}
+.hero__search ul:hover li{
+    background-color: white;
+    display: block;
+}
+.categorySelect{
+    overflow: visible;
+}
+
+
+ .hero__search__form form .hero__search__categories {
+ width: 30%;
+ float: left;
+ font-size: 16px;
+ color: #1c1c1c;
+ font-weight: 700;
+ /* padding-left: 0px; */
+ padding-top: 0px;
+ position: relative;
+ }
+
+
+

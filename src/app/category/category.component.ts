@@ -16,6 +16,31 @@ export class CategoryComponent implements OnInit {
   category!:CategoryModel|undefined;
   constructor(private categoryService:CategoryService,private productService:ProductService, private route:ActivatedRoute) { }
 
+  sortBy(event:Event){
+      let option = (event.target as HTMLSelectElement).value
+      if(this.category!==undefined){
+        this.productService.categoryProducts(this.category.id).subscribe(products=>{
+            this.products = products
+
+            if(option=='2'){
+                this.products = this.products.sort((a,b)=>{
+                    if(a.price<b.price){
+                        return -1;
+                    }
+                    return 0;
+                });
+            }else if(option=='3'){
+                this.products = this.products.sort((a,b)=>{
+                    if(a.price>b.price){
+                        return -1;
+                    }
+                    return 0;
+                });
+            }
+        });
+      }
+
+  }
 
   ngOnInit(): void {
     this.category = this.categoryService.findSlug(this.route.snapshot.params['slug']);
@@ -24,6 +49,8 @@ export class CategoryComponent implements OnInit {
         this.products = products;
      });
     }
+
+
 
 
  /*-----------------------

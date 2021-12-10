@@ -2,7 +2,7 @@ import { createReducer,on } from "@ngrx/store";
 import { addItem, removeItem, updateItemQty } from "./cart.actions";
 import { ProductModel } from "../models/product.model";
 
-export const initialState:Array<{product:ProductModel,qty:number}> = [{product:new ProductModel(1,'Product 1',5,'assets/img/product/details/product-details-1.jpg',['assets/img/product/details/thumb-1.jpg'],'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.','product-1',1,2,3,true,false),qty:3}]
+export const initialState:Array<{product:ProductModel,qty:number}> = [{product:new ProductModel(1,'Product 1',5,'assets/img/product/details/product-details-1.jpg',['assets/img/product/details/thumb-1.jpg'],'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.','product-1',1,2,3,true,false,false),qty:3}]
 export const cartReducer = createReducer(
   initialState,
   on(removeItem,(state,item)=>{
